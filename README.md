@@ -574,14 +574,15 @@ this.$dialog({
 **Props**
 
 | name        | type   | default | description               |
-| src         | String | ''      | 超链接                     |
+| ----------- | ------ | ------- | ------------------------- |
+| src         | String | ''      | 链接                      |
 ```js
  <img-loading
       v-if="banner.image"
       :src="banner.image.url">
  </img-loading>
 ```
-#### img-loading 图片加载资源等待组件
+#### img-loading 海报生成组件
 ```html
   <!--分享生成海报-->
     <store-poster
