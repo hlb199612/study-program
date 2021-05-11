@@ -3,6 +3,21 @@
 const _import = require('@/libs/util.import.' + process.env.NODE_ENV)
 
 /**
+ * 在主框架内显示
+ */
+const frameIn = [
+  {
+    path: '/',
+    name: 'index',
+    meta: {
+      title: '首页',
+      auth: true
+    },
+    component: _import('index/')
+  }
+]
+
+/**
  * 在主框架之外显示
  */
 const frameOut = [
@@ -28,6 +43,7 @@ const errorPage = [
 // 重新组织后导出
 
 export default [
+  ...frameIn,
   ...frameOut,
   ...errorPage
 ]
